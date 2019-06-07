@@ -1,0 +1,10 @@
+* f2org
+  
+a simply python program for =f90= module file auto documentation. The auto-generated documentation is Emacs =org-mode= file. 
+
+By using some simple tool, such as =pandoc=, it can be converted to many other formats.
+
+** Todo list[0/3]
+   - [ ] add comments to code
+   - [ ] write manual
+   - [ ] more tests
