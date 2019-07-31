@@ -1,0 +1,302 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>exampleModule &mdash; f2org 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Auto Documentation from src" href="autodocs.html" />
+    <link rel="prev" title="f2org" href="README.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> f2org
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">f2org</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">example<sub>Module</sub></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#example-subroutine-1">example_subroutine_1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-subroutine-2">example_subroutine_2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-function">example_function</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="autodocs.html">Auto Documentation from src</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">f2org</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>example<sub>Module</sub></li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/example.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="examplemodule">
+<h1>example<sub>Module</sub><a class="headerlink" href="#examplemodule" title="Permalink to this headline">¶</a></h1>
+<p>This is the example file for f2org. The f2org is used to extract the
+comments from the code to emacs-org mode.</p>
+<p>Some notes:</p>
+<ul class="simple">
+<li><p><strong>Only</strong> work for module file</p></li>
+<li><p>Some code should be written in a specific way, such as the
+<code class="docutils literal notranslate"><span class="pre">intent</span> <span class="pre">in</span></code> and <code class="docutils literal notranslate"><span class="pre">intent</span> <span class="pre">out</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pandoc</span></code> can be used to convert <code class="docutils literal notranslate"><span class="pre">.org</span></code> to <code class="docutils literal notranslate"><span class="pre">.md</span></code> or <code class="docutils literal notranslate"><span class="pre">rst</span></code>.</p></li>
+<li><p>Use of modules:</p></li>
+</ul>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">Use </span><span class="n">mod_1</span>
+<span class="k">Use </span><span class="n">mod_2</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>list of variables:</p></li>
+</ul>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">Integer</span> <span class="kd">::</span> <span class="n">foo1</span>
+<span class="kt">Real</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="kd">::</span> <span class="n">foo2</span>
+</pre></div>
+</div>
+<div class="section" id="example-subroutine-1">
+<h2>example_subroutine_1<a class="headerlink" href="#example-subroutine-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Use of modules:</p></li>
+</ul>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">use </span><span class="n">mod_3</span>
+</pre></div>
+</div>
+<p>input variables</p>
+<p><strong>None</strong></p>
+<p>output variables</p>
+<p><strong>None</strong></p>
+<ul class="simple">
+<li><p>list of local variables:</p></li>
+</ul>
+<p>this line will</p>
+<p>continue but not this line</p>
+</div>
+<div class="section" id="example-subroutine-2">
+<h2>example_subroutine_2<a class="headerlink" href="#example-subroutine-2" title="Permalink to this headline">¶</a></h2>
+<p>Some scripts for <code class="docutils literal notranslate"><span class="pre">example_subroutine_2</span></code></p>
+<ul class="simple">
+<li><p>Use of modules:</p></li>
+</ul>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">use </span><span class="n">mod_3</span>
+</pre></div>
+</div>
+<p>input variables</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">Integer</span><span class="p">,</span> <span class="k">Intent</span><span class="p">(</span><span class="n">In</span><span class="p">)</span> <span class="kd">::</span> <span class="n">foo4</span>
+<span class="kt">Real</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="k">Dimension</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="k">Intent</span><span class="p">(</span><span class="n">In</span><span class="p">)</span> <span class="kd">::</span> <span class="n">foo5</span>
+</pre></div>
+</div>
+<p>output variables</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">Real</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="k">Intent</span><span class="p">(</span><span class="n">Out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">foo6</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>list of local variables:</p></li>
+</ul>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">Integer</span> <span class="kd">::</span> <span class="n">foo7</span>
+<span class="kt">Integer</span> <span class="kd">::</span> <span class="n">foo8</span>
+</pre></div>
+</div>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">Print</span><span class="p">(</span><span class="s1">&#39;some_scripts1&#39;</span><span class="p">)</span> <span class="c">!-&gt;&gt;</span>
+<span class="k">Print</span><span class="p">(</span><span class="s1">&#39;some_scripts2&#39;</span><span class="p">)</span>
+<span class="k">Print</span><span class="p">(</span><span class="s1">&#39;some_scripts3&#39;</span><span class="p">)</span> <span class="c">!-&lt;&lt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="example-function">
+<h2>example_function<a class="headerlink" href="#example-function" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>Use of modules:</p></li>
+</ul>
+<p><strong>None</strong></p>
+<p>input variables</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">Integer</span><span class="p">,</span> <span class="k">Intent</span><span class="p">(</span><span class="n">In</span><span class="p">)</span> <span class="kd">::</span> <span class="n">foo_1</span>
+<span class="kt">Real</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="k">Dimension</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="kd">::</span> <span class="n">foo_2</span>
+</pre></div>
+</div>
+<p>output variables</p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="kt">Real</span><span class="p">(</span><span class="mi">4</span><span class="p">),</span> <span class="k">Intent</span><span class="p">(</span><span class="n">Out</span><span class="p">)</span> <span class="kd">::</span> <span class="n">foo_3</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>list of local variables:</p></li>
+</ul>
+<p><strong>None</strong></p>
+<div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">Print</span><span class="p">(</span><span class="s1">&#39;some_scripts1&#39;</span><span class="p">)</span> <span class="c">!-&gt;&lt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="autodocs.html" class="btn btn-neutral float-right" title="Auto Documentation from src" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="README.html" class="btn btn-neutral float-left" title="f2org" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Zhouteng Ye
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

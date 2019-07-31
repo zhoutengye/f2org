@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>f2org &mdash; f2org 0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="exampleModule" href="example.html" />
+    <link rel="prev" title="Welcome to f2org’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> f2org
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">f2org</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#run-the-code">Run the code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#workflow-for-f2org">Workflow for f2org</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#insert-documentation-in-the-code">Insert documentation in the code</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#normal-lines">Normal lines <code class="docutils literal notranslate"><span class="pre">!&gt;</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#new-lines">New lines <code class="docutils literal notranslate"><span class="pre">...</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#block-documentation-and">Block documentation <code class="docutils literal notranslate"><span class="pre">!=&gt;&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">!=&lt;&lt;</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#begin-and-end-of-the-variables-list-and">Begin and end of the variables list <code class="docutils literal notranslate"><span class="pre">!!&gt;&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">!!&lt;&lt;=</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#code-blocks-and">Code blocks <code class="docutils literal notranslate"><span class="pre">!-&gt;&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">!-&lt;&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">!-&gt;&lt;</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#org-mode-options-oh">Org mode options <code class="docutils literal notranslate"><span class="pre">!=OH</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rules-for-the-fortran-code">Rules for the Fortran Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#use-f2org-with-sphinx">Use f2org with Sphinx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#todo-list-code-2-3-code">Todo list<code>[2/3]</code></a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="example.html">example<sub>Module</sub></a></li>
+<li class="toctree-l1"><a class="reference internal" href="autodocs.html">Auto Documentation from src</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">f2org</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>f2org</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/README.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <ul class="simple">
+<li><p><a class="reference external" href="#org94a3803">f2org</a></p>
+<ul>
+<li><p><a class="reference external" href="#orga82eead">Run the code</a></p></li>
+<li><p><a class="reference external" href="#org5a350d3">Workflow for f2org</a></p></li>
+<li><p><a class="reference external" href="#org8f55daa">Insert documentation in the code</a></p>
+<ul>
+<li><p><a class="reference external" href="#org0d72c05">Normal lines <code class="docutils literal notranslate"><span class="pre">!&gt;</span></code></a></p></li>
+<li><p><a class="reference external" href="#org1fdebd7">New lines <code class="docutils literal notranslate"><span class="pre">...</span></code></a></p></li>
+<li><p><a class="reference external" href="#org99af481">Block documentation <code class="docutils literal notranslate"><span class="pre">!=&gt;&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">!=&lt;&lt;</span></code></a></p></li>
+<li><p><a class="reference external" href="#org19e0a9d">Begin and end of the variables list <code class="docutils literal notranslate"><span class="pre">!!&gt;&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">!!&lt;&lt;=</span></code></a></p></li>
+<li><p><a class="reference external" href="#orgb8a2d71">Code blocks <code class="docutils literal notranslate"><span class="pre">!-&gt;&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">!-&lt;&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">!-&gt;&lt;</span></code></a></p></li>
+<li><p><a class="reference external" href="#org6b87fe2">Org mode options <code class="docutils literal notranslate"><span class="pre">!=OH</span></code></a></p></li>
+</ul>
+</li>
+<li><p><a class="reference external" href="#orgb7a4f65">Rules for the Fortran Code</a></p></li>
+<li><p><a class="reference external" href="#org828173c">Use f2org with Sphinx</a></p></li>
+<li><p><a class="reference external" href="#orgab55349">Todo list<code>[2/3]</code></a></p></li>
+</ul>
+</li>
+</ul>
+<p><a id="org94a3803"></a></p>
+<div class="section" id="f2org">
+<h1>f2org<a class="headerlink" href="#f2org" title="Permalink to this headline">¶</a></h1>
+<p>a simply python program for <code class="docutils literal notranslate"><span class="pre">f90</span></code> module file auto documentation. The auto-generated documentation is Emacs <code class="docutils literal notranslate"><span class="pre">org-mode</span></code> file.</p>
+<p>By using some simple tool, such as <code class="docutils literal notranslate"><span class="pre">pandoc</span></code>, it can be converted to many other formats.</p>
+<p><a id="orga82eead"></a></p>
+<div class="section" id="run-the-code">
+<h2>Run the code<a class="headerlink" href="#run-the-code" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Step 1</strong>: generate the <code class="docutils literal notranslate"><span class="pre">org</span></code> file. For example, <code class="docutils literal notranslate"><span class="pre">example.f90</span></code> in <code class="docutils literal notranslate"><span class="pre">src</span></code>,</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python example.f90 -o example.org
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Step 2</strong>: use <code class="docutils literal notranslate"><span class="pre">pandoc</span></code> to get the target documentation. For example, <code class="docutils literal notranslate"><span class="pre">html</span></code></p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pandoc example.org -o example.html
+</pre></div>
+</div>
+<p><a id="org5a350d3"></a></p>
+</div>
+<div class="section" id="workflow-for-f2org">
+<h2>Workflow for f2org<a class="headerlink" href="#workflow-for-f2org" title="Permalink to this headline">¶</a></h2>
+<p>The workflow for <code class="docutils literal notranslate"><span class="pre">f2og</span></code> is</p>
+<ul class="simple">
+<li><p>Determine the start and end of each code block</p></li>
+<li><p>Depending on the type of the code block extract the <code class="docutils literal notranslate"><span class="pre">header</span></code> and <code class="docutils literal notranslate"><span class="pre">body</span></code> information and export to <code class="docutils literal notranslate"><span class="pre">org</span></code> file.</p></li>
+</ul>
+<p><a id="org8f55daa"></a></p>
+</div>
+<div class="section" id="insert-documentation-in-the-code">
+<h2>Insert documentation in the code<a class="headerlink" href="#insert-documentation-in-the-code" title="Permalink to this headline">¶</a></h2>
+<p><a id="org0d72c05"></a></p>
+<div class="section" id="normal-lines">
+<h3>Normal lines <code class="docutils literal notranslate"><span class="pre">!&gt;</span></code><a class="headerlink" href="#normal-lines" title="Permalink to this headline">¶</a></h3>
+<p>For a line starting with <code class="docutils literal notranslate"><span class="pre">!&gt;</span></code>, the text after <code class="docutils literal notranslate"><span class="pre">!&gt;</span></code> will be extracted to the <code class="docutils literal notranslate"><span class="pre">org</span></code> file.</p>
+<p><a id="org1fdebd7"></a></p>
+</div>
+<div class="section" id="new-lines">
+<h3>New lines <code class="docutils literal notranslate"><span class="pre">...</span></code><a class="headerlink" href="#new-lines" title="Permalink to this headline">¶</a></h3>
+<p>When you wish to start a new paragraph, inset <code class="docutils literal notranslate"><span class="pre">\\\</span></code> at the end of the last line.</p>
+<p><a id="org99af481"></a></p>
+</div>
+<div class="section" id="block-documentation-and">
+<h3>Block documentation <code class="docutils literal notranslate"><span class="pre">!=&gt;&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">!=&lt;&lt;</span></code><a class="headerlink" href="#block-documentation-and" title="Permalink to this headline">¶</a></h3>
+<p>The documentation for the code block (<strong>module</strong>, <strong>function</strong>, and <strong>subroutine</strong>) should come before the code block. It should be noted that, only lines startin with <code class="docutils literal notranslate"><span class="pre">!&gt;</span></code> will become a part of the documentation, while lines starting with <code class="docutils literal notranslate"><span class="pre">!</span></code> will not.</p>
+<p><a id="org19e0a9d"></a></p>
+</div>
+<div class="section" id="begin-and-end-of-the-variables-list-and">
+<h3>Begin and end of the variables list <code class="docutils literal notranslate"><span class="pre">!!&gt;&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">!!&lt;&lt;=</span></code><a class="headerlink" href="#begin-and-end-of-the-variables-list-and" title="Permalink to this headline">¶</a></h3>
+<p>By inserting the <code class="docutils literal notranslate"><span class="pre">!!&gt;&gt;</span></code> above the starting of the variable list and <code class="docutils literal notranslate"><span class="pre">!!&lt;&lt;</span></code> below the end of the variable list (Here the variable list is the variable that you would like to show in the documentation, exclude the variables in the function/subroutine interface).</p>
+<p><a id="orgb8a2d71"></a></p>
+</div>
+<div class="section" id="code-blocks-and">
+<h3>Code blocks <code class="docutils literal notranslate"><span class="pre">!-&gt;&gt;</span></code>, <code class="docutils literal notranslate"><span class="pre">!-&lt;&lt;</span></code> and <code class="docutils literal notranslate"><span class="pre">!-&gt;&lt;</span></code><a class="headerlink" href="#code-blocks-and" title="Permalink to this headline">¶</a></h3>
+<p>To export some comments or source code, one option is to add <code class="docutils literal notranslate"><span class="pre">!-&gt;&gt;</span></code> and <code class="docutils literal notranslate"><span class="pre">!-&lt;&lt;</span></code> to export the</p>
+<p><a id="org6b87fe2"></a></p>
+</div>
+<div class="section" id="org-mode-options-oh">
+<h3>Org mode options <code class="docutils literal notranslate"><span class="pre">!=OH</span></code><a class="headerlink" href="#org-mode-options-oh" title="Permalink to this headline">¶</a></h3>
+<p>Some <code class="docutils literal notranslate"><span class="pre">org-mode</span></code> headers, such as title, author, comes with <code class="docutils literal notranslate"><span class="pre">!=OH</span></code></p>
+<p><a id="orgb7a4f65"></a></p>
+</div>
+</div>
+<div class="section" id="rules-for-the-fortran-code">
+<h2>Rules for the Fortran Code<a class="headerlink" href="#rules-for-the-fortran-code" title="Permalink to this headline">¶</a></h2>
+<p>In order to make <code class="docutils literal notranslate"><span class="pre">f2org</span></code> work properly, the <code class="docutils literal notranslate"><span class="pre">Fortran</span></code> code should satisfy the following requirement:</p>
+<ul class="simple">
+<li><p>In the current version, <strong>only</strong> file with one <code class="docutils literal notranslate"><span class="pre">module</span></code> in a file is supported. If you have a <code class="docutils literal notranslate"><span class="pre">program</span> <span class="pre">file</span></code>, a file with multiple <code class="docutils literal notranslate"><span class="pre">modules</span></code> or a file without <code class="docutils literal notranslate"><span class="pre">module</span></code>, <code class="docutils literal notranslate"><span class="pre">f2org</span></code> will not work</p></li>
+<li><p>The Documentation for the code block should be placed before the begining of the block.</p></li>
+<li><p>For each clode block, <code class="docutils literal notranslate"><span class="pre">Implicit</span> <span class="pre">None</span></code> is essentlal.</p></li>
+<li><p>For <code class="docutils literal notranslate"><span class="pre">subroutine</span></code>, The <code class="docutils literal notranslate"><span class="pre">intent</span></code> statement for the IO variables is essential.</p></li>
+<li><p>For <code class="docutils literal notranslate"><span class="pre">function</span></code>, only the programming way <code class="docutils literal notranslate"><span class="pre">function</span> <span class="pre">foo(a,b)</span> <span class="pre">output(c)</span></code> will be</p></li>
+</ul>
+<p>detect correctly.</p>
+<ul class="simple">
+<li><p>To export correctly, always add <code class="docutils literal notranslate"><span class="pre">::</span></code> while declear the variables.</p></li>
+</ul>
+<p><a id="org828173c"></a></p>
+</div>
+<div class="section" id="use-f2org-with-sphinx">
+<h2>Use f2org with Sphinx<a class="headerlink" href="#use-f2org-with-sphinx" title="Permalink to this headline">¶</a></h2>
+<p>See <code class="docutils literal notranslate"><span class="pre">docs</span></code></p>
+<p><a id="orgab55349"></a></p>
+</div>
+<div class="section" id="todo-list-code-2-3-code">
+<h2>Todo list<code>[2/3]</code><a class="headerlink" href="#todo-list-code-2-3-code" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>[X] add comments to code</p></li>
+<li><p>[X] write manual</p></li>
+<li><p>[ ] Support for more file types</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="example.html" class="btn btn-neutral float-right" title="exampleModule" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to f2org’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Zhouteng Ye
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,10 +1,71 @@
 * f2org
   
-a simply python program for =f90= module file auto documentation. The auto-generated documentation is Emacs =org-mode= file. 
+a simply python program for =f90= module file auto documentation. The
+auto-generated documentation is Emacs =org-mode= file.  
 
-By using some simple tool, such as =pandoc=, it can be converted to many other formats.
+By using some simple tool, such as =pandoc=, it can be converted to many other
+formats. 
 
-** Todo list[0/3]
-   - [ ] add comments to code
-   - [ ] write manual
-   - [ ] more tests
+** Run the code
+   - *Step 1*: generate the =org= file. For example, =example.f90= in =src=,
+   #+begin_src bash
+     python example.f90 -o example.org
+   #+end_src
+   - *Step 2*: use =pandoc= to get the target documentation. For example, =html=
+   #+begin_src bash
+     pandoc example.org -o example.html
+   #+end_src
+
+** Workflow for f2org
+   The workflow for =f2og= is
+   - Determine the start and end of each code block
+   - Depending on the type of the code block extract the =header= and =body=
+     information and export to =org= file.
+     
+** Insert documentation in the code
+*** Normal lines =!>=
+    For a line starting with =!>=, the text after =!>= will be extracted to the
+    =org= file. 
+*** New lines =...=
+    When you wish to start a new paragraph, inset =\\\= at the end of the last line.
+*** Block documentation =!=>>= and =!=<<=
+    The documentation for the code block (*module*, *function*, and
+    *subroutine*) should come before the code block. It should be noted that,
+    only lines startin with =!>= will become a part of the documentation, while
+    lines starting with =!= will not.
+*** Begin and end of the variables list =!!>>= and =!!<<==
+    By inserting the =!!>>= above the starting of the variable list and =!!<<=
+    below the end of the variable list (Here the variable list is the variable
+    that you would like to show in the documentation, exclude the variables in
+    the function/subroutine interface).
+*** Code blocks =!->>=, =!-<<= and =!-><=
+    To export some comments or source code, one option is to add  =!->>= and
+    =!-<<= to export the 
+*** Org mode options =!=OH=
+    Some =org-mode= headers, such as title, author, comes with =!=OH=
+
+** Rules for the Fortran Code
+   In order to make =f2org= work properly, the =Fortran= code should satisfy the following requirement:
+   
+- In the current version, *only* file with one =module= in a file is supported. If you
+  have a =program file=, a file with multiple =modules= or a file without
+  =module=, =f2org= will not work
+
+- The Documentation for the code block should be placed before the begining of the block.
+     
+- For each clode block, =Implicit None= is essentlal. 
+
+- For =subroutine=, The =intent= statement for the IO variables is essential.
+  
+- For =function=, only the programming way =function foo(a,b) output(c)= will be
+detect correctly.
+
+- To export correctly, always add =::= while declear the variables.
+
+** Use f2org with Sphinx
+   See =docs=
+** Todo list[2/3]
+   - [X] add comments to code
+   - [X] write manual
+   - [ ] Support for more file types
+   

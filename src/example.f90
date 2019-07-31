@@ -1,13 +1,13 @@
 !----------------------------------------------------------
+!=>>
 !> This is the example file for f2org. The f2org is used to
-!> extract the comments from the code to emacs-org mode.
-!>
+!> extract the comments from the code to emacs-org mode. ...
 !> Some notes:
 !> - *Only* work for module file
 !> - Some code should be written in a specific way, such
 !>   as the =intent in= and =intent out=.
 !> - =pandoc= can be used to convert =.org= to =.md= or =rst=.
-!>
+!=<<
 !----------------------------------------------------------
 !=OH #+author: Zhouteng Ye
 !=OH #+date: June 5, 2019
@@ -45,9 +45,9 @@ Contains
   End Subroutine example_subroutine_1
 
   !----------------------------------------------------------
-  !> =>>
+  !=>>
   !> Some scripts for =example_subroutine_2=
-  !> =<<
+  !=<<
   !----------------------------------------------------------
   Subroutine example_subroutine_2(foo4, foo5, foo6)
     use mod_3
